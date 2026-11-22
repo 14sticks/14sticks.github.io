@@ -7,15 +7,22 @@
 <meta name="description" content="Cinematic sound for film & television. AMVCA-winning sound design, audio post-production, film scoring and mixing by Mustapha Ishola — 14 Sticks Entertainments, Lagos.">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#0b1120;--bg-2:#111a2e;--panel:#16203a;--ink:#f8fafc;--muted:#94a3b8;--line:#243049;--gold:#d4a24c;--gold-2:#e8bd6f;--slate:#334155;--radius:16px;--max:1160px}
-  *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+  :root{
+    --bg:#0b1120; --bg-2:#111a2e; --panel:#16203a; --ink:#f8fafc; --muted:#94a3b8;
+    --line:#243049; --gold:#d4a24c; --gold-2:#e8bd6f; --slate:#334155; --radius:16px; --max:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth}
   body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
   h1,h2,h3,.brand{font-family:'Montserrat',sans-serif;line-height:1.1}
+
+  /* ---------- NAV ---------- */
   header.nav{position:sticky;top:0;z-index:50;background:rgba(11,17,32,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
-  .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px;font-size:1.05rem;color:var(--ink)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:90px}
+  .brand{display:flex;align-items:center;gap:16px;font-weight:800;letter-spacing:.5px;font-size:1.05rem;color:var(--ink)}
+  
+  .nav-logo {height: 60px; width: auto; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.95;}
   .brand span small{display:block;font-size:.62rem;letter-spacing:2px;color:var(--gold);font-weight:700;text-transform:uppercase}
   nav.links{display:flex;gap:28px;font-size:.9rem;font-weight:600;color:var(--muted)}
   nav.links a:hover{color:var(--gold-2)}
@@ -25,10 +32,12 @@
   .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
   .btn-ghost:hover{border-color:var(--gold);color:var(--gold-2)}
   .nav .btn{padding:10px 18px}
+
+  /* ---------- HERO ---------- */
   .hero{position:relative;overflow:hidden;padding:96px 0 84px;border-bottom:1px solid var(--line)}
   .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 420px at 78% 8%, rgba(212,162,76,.16), transparent 60%),radial-gradient(700px 500px at 8% 90%, rgba(51,65,85,.55), transparent 65%);pointer-events:none}
   .hero-grid{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
-  .hero-logo{height:180px;width:auto;object-fit:contain;margin-bottom:26px;filter:brightness(0) invert(1);opacity:.95}
+  
   .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);padding:8px 14px;border:1px solid var(--line);border-radius:999px;margin-bottom:26px;background:rgba(22,32,58,.5)}
   .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
   .hero h1{font-size:clamp(2.4rem,5.4vw,4.1rem);font-weight:900;letter-spacing:-.5px}
@@ -42,11 +51,15 @@
   .portrait .tag{position:absolute;left:16px;bottom:16px;background:rgba(11,17,32,.78);border:1px solid var(--line);border-radius:12px;padding:10px 14px;backdrop-filter:blur(8px)}
   .portrait .tag b{display:block;font-family:'Montserrat',sans-serif;font-size:.9rem}
   .portrait .tag small{color:var(--gold);font-weight:700;font-size:.66rem;letter-spacing:1.6px;text-transform:uppercase}
+
+  /* ---------- SECTIONS ---------- */
   section{padding:88px 0;border-bottom:1px solid var(--line)}
   .sec-head{max-width:640px;margin-bottom:52px}
   .sec-head .kicker{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
   .sec-head h2{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;letter-spacing:-.4px}
   .sec-head p{color:var(--muted);margin-top:14px}
+
+  /* Services */
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .card{position:relative;overflow:hidden;min-height:200px;display:flex;flex-direction:column;justify-content:flex-end;background-size:cover;background-position:center;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:all .2s ease}
   .card:hover{border-color:rgba(212,162,76,.5);transform:translateY(-4px)}
@@ -62,6 +75,8 @@
   .card:nth-child(4){background-image:url('https://images.unsplash.com/photo-1516223725307-6f76b9ec8742?q=80&w=800&auto=format&fit=crop')}
   .card:nth-child(5){background-image:url('https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=800&auto=format&fit=crop')}
   .card:nth-child(6){background-image:url('https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=800&auto=format&fit=crop')}
+
+  /* Credits & Awards */
   .credits-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
   .credit-list{list-style:none;display:flex;flex-direction:column;gap:2px}
   .credit-list li{display:grid;grid-template-columns:52px 1fr auto;gap:14px;align-items:center;padding:14px 4px;border-bottom:1px solid var(--line)}
@@ -72,21 +87,26 @@
   .credit-thumb{width:52px;height:74px;border-radius:8px;overflow:hidden;background:var(--slate);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--line);transition:transform .2s ease}
   .credit-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
   .credit-thumb:hover img{transform:scale(1.08)}
-  .credit-thumb.missing span{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.1rem;color:var(--gold-2)}
   .award{background:linear-gradient(135deg,rgba(212,162,76,.14),var(--panel));border:1px solid rgba(212,162,76,.35);border-radius:var(--radius);padding:24px;margin-bottom:16px}
   .award .yr{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.68rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold)}
   .award h3{font-size:1.15rem;font-weight:800;margin:8px 0 4px}
   .award p{color:var(--muted);font-size:.86rem}
-  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center;max-width:800px}
   .about p{color:var(--muted);margin-bottom:16px}
   .about p strong{color:var(--ink)}
   .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
   .chip{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.76rem;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--muted)}
   .chip.on{color:var(--gold-2);border-color:rgba(212,162,76,.45);background:rgba(212,162,76,.08)}
+
+  /* CTA band */
   .band{background:radial-gradient(600px 260px at 50% 0%, rgba(212,162,76,.2), transparent 70%),linear-gradient(180deg,var(--bg-2),var(--bg));text-align:center;padding:80px 0}
   .band h2{font-size:clamp(1.8rem,3.6vw,2.8rem);font-weight:900;letter-spacing:-.5px;margin-bottom:16px}
   .band p{color:var(--muted);max-width:560px;margin:0 auto 34px}
   .band .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  /* Contact */
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
   form.contact{background:linear-gradient(180deg,var(--panel),var(--bg-2));border:1px solid var(--line);border-radius:var(--radius);padding:32px}
   .field{margin-bottom:18px}
@@ -103,6 +123,8 @@
   .contact-line b{display:block;font-family:'Montserrat',sans-serif;font-size:.84rem}
   .contact-line span{color:var(--muted);font-size:.86rem;word-break:break-word}
   .contact-line a:hover{color:var(--gold-2)}
+
+  /* Footer */
   footer{padding:60px 0 40px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);background:var(--bg-2)}
   .foot-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-top:30px;border-top:1px solid var(--line)}
   .foot-inner nav{display:flex;gap:22px}
@@ -110,6 +132,8 @@
   .footer-brand{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:30px;text-align:center}
   .footer-brand img{height:80px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.9}
   .footer-brand p{margin-top:12px;font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-size:.85rem}
+
+  /* Modal & Chat */
   #lightbox{display:none;position:fixed;inset:0;z-index:9999;background:rgba(11,17,32,.94);backdrop-filter:blur(8px);align-items:center;justify-content:center;flex-direction:column;padding:30px}
   #lightbox.active{display:flex}
   #lightbox img{max-width:90vw;max-height:80vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.6);border:1px solid rgba(212,162,76,.3)}
@@ -128,12 +152,15 @@
   .chat-options{display:flex;flex-direction:column;gap:8px;margin-top:10px}
   .chat-opt{background:transparent;border:1px solid var(--gold);color:var(--gold-2);padding:8px 12px;border-radius:999px;font-size:.8rem;text-align:left;cursor:pointer;transition:all .2s;font-family:'Montserrat',sans-serif;font-weight:600}
   .chat-opt:hover{background:rgba(212,162,76,.1)}
+
+  /* Responsive */
   @media(max-width:960px){
-    .hero-grid,.credits-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+    .hero-grid,.credits-grid,.contact-grid{grid-template-columns:1fr}
     .cards{grid-template-columns:repeat(2,1fr)}
     nav.links{display:none}
     .portrait{max-width:380px;margin:0 auto;aspect-ratio:4/5}
-    .hero-logo{height:140px}
+    .nav-logo{height:45px;}
+    .brand span small{display:none;}
   }
   @media(max-width:600px){
     .cards{grid-template-columns:1fr}
@@ -142,8 +169,6 @@
     .proof{gap:20px}
     .credit-list li{grid-template-columns:44px 1fr;gap:10px}
     .credit-list .r{grid-column:2;text-align:left}
-    .hero-logo{height:100px}
-    .chat-window{width:calc(100vw - 44px);left:22px}
   }
 </style>
 </head>
@@ -152,6 +177,7 @@
 <header class="nav">
   <div class="wrap nav-inner">
     <a href="#top" class="brand">
+      <img src="logo.png" alt="14 Sticks Entertainments Logo" class="nav-logo" onerror="this.style.display='none'">
       <span>14 Sticks Entertainments<small>Sound · Film · Music</small></span>
     </a>
     <nav class="links">
@@ -167,7 +193,6 @@
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
-      <img src="logo.png" alt="14 Sticks Entertainments Logo" class="hero-logo" onerror="this.style.display='none'">
       <div class="eyebrow">AMVCA Winner · Best Sound</div>
       <h1>Cinematic sound for stories that need to be <em>heard.</em></h1>
       <p class="lead">Full-service sound design, audio post-production and original film scoring for filmmakers, TV producers and creative teams — led by Mustapha Ishola and the team at 14 Sticks Entertainments, Lagos.</p>
@@ -214,41 +239,12 @@
     </div>
     <div class="credits-grid">
       <ul class="credit-list">
-        <li>
-          <div class="credit-thumb"><img src="Anikulapo%20(2022).jpg" alt="Anikulapo poster" onclick="openLightbox(this.src, 'Anikulapo')" style="cursor:pointer"></div>
-          <span class="t">ANIKULAPO</span>
-          <span class="r">Golden Effects Pictures<small>Sound Effects Editor / Sound Designer</small></span>
-        </li>
-        <li>
-          <div class="credit-thumb"><img src="Fine%20Wine.jpg" alt="Fine Wine poster" onclick="openLightbox(this.src, 'Fine Wine')" style="cursor:pointer"></div>
-          <span class="t">FINE WINE</span>
-          <span class="r">Nevada Bridge TV<small>Audio Post-Production Engineer</small></span>
-        </li>
-        <li>
-          <div class="credit-thumb"><img src="Sanitation%20Day%20(2020).jpg" alt="Sanitation Day poster" onclick="openLightbox(this.src, 'Sanitation Day')" style="cursor:pointer"></div>
-          <span class="t">SANITATION DAY</span>
-          <span class="r">Pheabean Films<small>Audio Post-Production Engineer</small></span>
-        </li>
-        <li>
-          <div class="credit-thumb"><img src="Lies%20Are%20Beautiful%20(2020).jpg" alt="Lies Are Beautiful poster" onclick="openLightbox(this.src, 'Lies Are Beautiful')" style="cursor:pointer"></div>
-          <span class="t">LIES ARE BEAUTIFUL</span>
-          <span class="r">Sound Editor · Sound Designer<br>Dialogue Editor · Composer · Re-recording Mixer</span>
-        </li>
-        <li>
-          <div class="credit-thumb"><img src="Praise%20Party%20(2023).jpg" alt="Praise Party poster" onclick="openLightbox(this.src, 'Praise Party')" style="cursor:pointer"></div>
-          <span class="t">PRAISE PARTY</span>
-          <span class="r">Audio Post / Music<small>Sound Design / Composition</small></span>
-        </li>
-        <li>
-          <div class="credit-thumb"><img src="Rising_%20City%20of%20Dreams%20(2022).jpg" alt="Rising: City of Dreams poster" onclick="openLightbox(this.src, 'Rising: City of Dreams')" style="cursor:pointer"></div>
-          <span class="t">RISING: CITY OF DREAMS</span>
-          <span class="r">Sound Editor · Sound Designer<br>Dialogue Editor · Composer · Re-recording Mixer</span>
-        </li>
-        <li>
-          <div class="credit-thumb"><img src="maffialliance.jpg" alt="Maffialliance poster" onclick="openLightbox(this.src, 'Maffialliance')" style="cursor:pointer"></div>
-          <span class="t">MAFFIALLIANCE</span>
-          <span class="r">Sound Editor · Sound Designer<br>Dialogue Editor · Composer · Re-recording Mixer</span>
-        </li>
+        <li><div class="credit-thumb"><img src="Anikulapo%20(2022).jpg" alt="Anikulapo poster" onclick="openLightbox(this.src, 'Anikulapo')" style="cursor:pointer"></div><span class="t">ANIKULAPO</span><span class="r">Golden Effects Pictures<small>Sound Effects Editor / Sound Designer</small></span></li>
+        <li><div class="credit-thumb"><img src="Fine%20Wine.jpg" alt="Fine Wine poster" onclick="openLightbox(this.src, 'Fine Wine')" style="cursor:pointer"></div><span class="t">FINE WINE</span><span class="r">Nevada Bridge TV<small>Audio Post-Production Engineer</small></span></li>
+        <li><div class="credit-thumb"><img src="Sanitation%20Day%20(2020).jpg" alt="Sanitation Day poster" onclick="openLightbox(this.src, 'Sanitation Day')" style="cursor:pointer"></div><span class="t">SANITATION DAY</span><span class="r">Pheabean Films<small>Audio Post-Production Engineer</small></span></li>
+        <li><div class="credit-thumb"><img src="Lies%20Are%20Beautiful%20(2020).jpg" alt="Lies Are Beautiful poster" onclick="openLightbox(this.src, 'Lies Are Beautiful')" style="cursor:pointer"></div><span class="t">LIES ARE BEAUTIFUL</span><span class="r">Sound Editor · Sound Designer<br>Dialogue Editor · Composer · Re-recording Mixer</span></li>
+        <li><div class="credit-thumb"><img src="Praise%20Party%20(2023).jpg" alt="Praise Party poster" onclick="openLightbox(this.src, 'Praise Party')" style="cursor:pointer"></div><span class="t">PRAISE PARTY</span><span class="r">Audio Post / Music<small>Sound Design / Composition</small></span></li>
+        <li><div class="credit-thumb"><img src="Rising_%20City%20of%20Dreams%20(2022).jpg" alt="Rising: City of Dreams poster" onclick="openLightbox(this.src, 'Rising: City of Dreams')" style="cursor:pointer"></div><span class="t">RISING: CITY OF DREAMS</span><span class="r">Sound Editor · Sound Designer<br>Dialogue Editor · Composer · Re-recording Mixer</span></li>
       </ul>
       <div>
         <div class="award"><div class="yr">AMVCA Winner</div><h3>Best Sound — Anikulapo</h3><p>Africa Magic Viewers’ Choice Award, Golden Effects Pictures.</p></div>
@@ -267,12 +263,16 @@
       <p><strong>14 Sticks Entertainments</strong> is a Lagos-based audio post and music production house founded by <strong>Mustapha Ishola</strong> — a sound designer, recording and mixing engineer, music producer and film composer.</p>
       <p>Across more than a decade in film, television, music and studio environments, the work has earned an <strong>AMVCA for Best Sound</strong> and credits on a <strong>Top-5 Netflix title</strong>. From sound editorial to final delivery, the goal is the same: sound that serves the story.</p>
       <div class="chips">
-        <span class="chip on">Sound Design</span><span class="chip on">Audio Post</span><span class="chip on">Dolby Atmos</span><span class="chip">Logic Pro</span><span class="chip">Steinberg Nuendo</span><span class="chip">Foley</span><span class="chip">Film Scoring</span>
+        <span class="chip on">Sound Design</span>
+        <span class="chip on">Audio Post</span>
+        <span class="chip on">Dolby Atmos</span>
+        <span class="chip">Logic Pro</span>
+        <span class="chip">Steinberg Nuendo</span>
+        <span class="chip">iZotope RX</span>
+        <span class="chip">Pro Tools</span>
+        <span class="chip">Foley</span>
+        <span class="chip">Film Scoring</span>
       </div>
-    </div>
-    <div class="portrait" style="aspect-ratio:4/5">
-      <img src="profile.jpg" alt="Mustapha Ishola" style="object-position:center 15%">
-      <div class="tag"><small>Lagos, Nigeria</small><b>14 Sticks Entertainments</b></div>
     </div>
   </div>
 </section>
@@ -295,9 +295,7 @@
       <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
       <div class="field">
         <label for="project">Project type</label>
-        <select id="project" name="project">
-          <option>Film</option><option>TV / Series</option><option>Documentary</option><option>Film score</option><option>Music / Studio</option><option>Other</option>
-        </select>
+        <select id="project" name="project"><option>Film</option><option>TV / Series</option><option>Documentary</option><option>Film score</option><option>Music / Studio</option><option>Other</option></select>
       </div>
       <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us about your project, timeline and what you need…" required></textarea></div>
       <button type="submit" class="btn btn-gold">Send Message →</button>
