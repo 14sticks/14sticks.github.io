@@ -35,29 +35,8 @@
 
   /* ---------- HERO ---------- */
   .hero{position:relative;overflow:hidden;padding:96px 0 84px;border-bottom:1px solid var(--line)}
-  
-  /* NEW: Mixer Background */
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2000&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.25; /* Opaque effect */
-    z-index: 0;
-  }
-
-  /* Dark gradient overlay to ensure text readability */
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(11,17,32,.4) 0%, rgba(11,17,32,.95) 100%), radial-gradient(900px 420px at 78% 8%, rgba(212,162,76,.16), transparent 60%);
-    z-index: 1;
-    pointer-events: none;
-  }
-
+  .hero::before{content:"";position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2000&auto=format&fit=crop');background-size:cover;background-position:center;opacity:0.25;z-index:0}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(11,17,32,.4) 0%, rgba(11,17,32,.95) 100%), radial-gradient(900px 420px at 78% 8%, rgba(212,162,76,.16), transparent 60%);z-index:1;pointer-events:none}
   .hero-grid{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;z-index:2}
   
   .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);padding:8px 14px;border:1px solid var(--line);border-radius:999px;margin-bottom:26px;background:rgba(22,32,58,.5);backdrop-filter:blur(4px)}
@@ -198,17 +177,18 @@
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <a href="#top" class="brand">
+    <a href="index.html" class="brand">
       <img src="logo.png" alt="14 Sticks Entertainments Logo" class="nav-logo" onerror="this.style.display='none'">
       <span>14 Sticks Entertainments<small>Sound · Film · Music</small></span>
     </a>
     <nav class="links">
-      <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#work">Work</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
-    <a href="#contact" class="btn btn-gold">Start a Project</a>
+    <a href="index.html#contact" class="btn btn-gold">Start a Project</a>
   </div>
 </header>
 
@@ -219,7 +199,7 @@
       <h1>Cinematic sound for stories that need to be <em>heard.</em></h1>
       <p class="lead">Full-service sound design, audio post-production and original film scoring for filmmakers, TV producers and creative teams — led by Mustapha Ishola and the team at 14 Sticks Entertainments, Lagos.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-gold">Start a Project →</a>
+        <a href="index.html#contact" class="btn btn-gold">Start a Project →</a>
         <a href="https://drive.google.com/drive/folders/1DfTh6ypGMc6JSjC5PWyhMm0hofQPuVuJ" target="_blank" rel="noopener" class="btn btn-ghost">▶ Browse Showreel</a>
       </div>
       <div class="proof">
@@ -304,7 +284,7 @@
     <h2>Got a story that needs the right sound?</h2>
     <p>Tell us about your project — film, series, documentary or score — and we’ll get back to you.</p>
     <div class="btn-row">
-      <a href="#contact" class="btn btn-gold">Start a Project →</a>
+      <a href="index.html#contact" class="btn btn-gold">Start a Project →</a>
       <a href="https://wa.me/2348148058613" target="_blank" rel="noopener" class="btn btn-ghost">Chat on WhatsApp</a>
     </div>
   </div>
@@ -339,7 +319,7 @@
     <div class="footer-brand"><img src="logo.png" alt="14 Sticks Entertainments" onerror="this.style.display='none'"><p>14 Sticks Entertainments</p></div>
     <div class="foot-inner">
       <div>© <span id="year"></span> 14 Sticks Entertainments. All rights reserved.</div>
-      <nav><a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+      <nav><a href="index.html#services">Services</a><a href="index.html#work">Work</a><a href="pricing.html">Pricing</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav>
     </div>
   </div>
 </footer>
