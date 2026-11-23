@@ -1,2 +1,2 @@
-# 14sticksentertainments.github.io
+# 14sticks.github.io
 Website
