@@ -13,7 +13,6 @@
   }
   *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth}
   
-  /* FIXED BACKGROUND FOR THE WHOLE SITE */
   body{
     font-family:'Open Sans',sans-serif;
     color:var(--ink);
@@ -21,7 +20,7 @@
     -webkit-font-smoothing:antialiased;
     background-color: var(--bg);
     background-image: 
-      linear-gradient(rgba(11, 17, 32, 0.92), rgba(11, 17, 32, 0.95)), /* Dark overlay for text readability */
+      linear-gradient(rgba(11, 17, 32, 0.92), rgba(11, 17, 32, 0.95)),
       url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2000&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
@@ -33,14 +32,12 @@
   .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
   h1,h2,h3,.brand{font-family:'Montserrat',sans-serif;line-height:1.1}
 
-  /* Make sections slightly transparent so background shows through */
   section{background: rgba(11, 17, 32, 0.4); backdrop-filter: blur(2px); border-bottom:1px solid var(--line); padding:88px 0}
   
   /* ---------- NAV ---------- */
   header.nav{position:sticky;top:0;z-index:50;background:rgba(11,17,32,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:90px}
   .brand{display:flex;align-items:center;gap:16px;font-weight:800;letter-spacing:.5px;font-size:1.05rem;color:var(--ink)}
-  
   .nav-logo {height: 60px; width: auto; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.95;}
   .brand span small{display:block;font-size:.62rem;letter-spacing:2px;color:var(--gold);font-weight:700;text-transform:uppercase}
   nav.links{display:flex;gap:28px;font-size:.9rem;font-weight:600;color:var(--muted)}
@@ -55,7 +52,6 @@
   /* ---------- HERO ---------- */
   .hero{position:relative;padding:110px 0 100px;text-align:center; background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1);}
   .hero-content{position:relative;z-index:2;max-width:800px;margin:0 auto}
-  
   .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);padding:8px 14px;border:1px solid var(--line);border-radius:999px;margin-bottom:26px;background:rgba(22,32,58,.7);backdrop-filter:blur(4px)}
   .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
   .hero h1{font-size:clamp(2.6rem,5.8vw,4.5rem);font-weight:900;letter-spacing:-.5px;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin-bottom:24px}
@@ -112,8 +108,6 @@
   .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
   .chip{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.76rem;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(22,32,58,.8);color:var(--muted)}
   .chip.on{color:var(--gold-2);border-color:rgba(212,162,76,.45);background:rgba(212,162,76,.08)}
-
-  /* Portrait */
   .portrait{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;background:linear-gradient(160deg,#1b2740,#0e1626);box-shadow:0 30px 70px rgba(0,0,0,.45)}
   .portrait img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
   .portrait .tag{position:absolute;left:16px;bottom:16px;background:rgba(11,17,32,.85);border:1px solid var(--line);border-radius:12px;padding:10px 14px;backdrop-filter:blur(8px)}
@@ -160,6 +154,7 @@
   #lightbox .caption{margin-top:18px;font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:1px;color:var(--gold-2);font-size:.9rem}
   #lightbox .close-btn{position:absolute;top:20px;right:24px;color:#fff;font-size:2.2rem;cursor:pointer;line-height:1;opacity:.7;transition:opacity .2s}
   #lightbox .close-btn:hover{opacity:1}
+  
   .chat-toggle{position:fixed;left:22px;bottom:22px;z-index:60;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#b3832f);color:#0b1120;border:none;display:flex;align-items:center;justify-content:center;font-size:1.6rem;cursor:pointer;box-shadow:0 12px 30px rgba(212,162,76,.35);transition:transform .15s ease}
   .chat-toggle:hover{transform:scale(1.08)}
   .chat-window{display:none;position:fixed;left:22px;bottom:90px;z-index:65;width:320px;background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:0 20px 50px rgba(0,0,0,.5);overflow:hidden;flex-direction:column}
@@ -172,6 +167,71 @@
   .chat-options{display:flex;flex-direction:column;gap:8px;margin-top:10px}
   .chat-opt{background:transparent;border:1px solid var(--gold);color:var(--gold-2);padding:8px 12px;border-radius:999px;font-size:.8rem;text-align:left;cursor:pointer;transition:all .2s;font-family:'Montserrat',sans-serif;font-weight:600}
   .chat-opt:hover{background:rgba(212,162,76,.1)}
+
+  /* ---------- AUDIO PLAYER ---------- */
+  .audio-player {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 60;
+    width: 320px;
+    background: rgba(22,32,58,.95);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: transform .3s ease;
+  }
+  .audio-player.hidden { transform: translateY(calc(100% - 50px)); }
+  
+  .audio-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: rgba(11,17,32,.8);
+    border-bottom: 1px solid var(--line);
+    cursor: pointer;
+  }
+  .audio-header h4 { font-family:'Montserrat',sans-serif; font-size: .8rem; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; }
+  .audio-header .toggle-icon { color: var(--muted); font-size: 1.2rem; transition: transform 0.3s; }
+  .audio-player.hidden .toggle-icon { transform: rotate(180deg); }
+  
+  .audio-body { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+  
+  .audio-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .play-btn {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--gold); border: none; color: #0b1120;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; cursor: pointer; flex-shrink: 0;
+  }
+  .track-info { flex-grow: 1; overflow: hidden;}
+  .track-info .title { font-size: .85rem; font-weight: 700; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .track-info .artist { font-size: .75rem; color: var(--muted); }
+  
+  .progress-bar {
+    width: 100%; height: 4px; background: var(--line); border-radius: 2px; cursor: pointer; position: relative;
+  }
+  .progress-fill {
+    height: 100%; background: var(--gold); border-radius: 2px; width: 0%; transition: width 0.1s linear;
+  }
+  
+  .track-list {
+    list-style: none; max-height: 180px; overflow-y: auto; margin-top: 8px;
+    scrollbar-width: thin; scrollbar-color: var(--line) transparent;
+  }
+  .track-list li {
+    padding: 8px 10px; font-size: .8rem; color: var(--muted); cursor: pointer; border-radius: 6px;
+    display: flex; justify-content: space-between; transition: background 0.2s;
+  }
+  .track-list li:hover { background: rgba(255,255,255,.05); color: var(--ink); }
+  .track-list li.active { color: var(--gold-2); background: rgba(212,162,76,.1); font-weight: 600; }
 
   /* Responsive */
   @media(max-width:960px){
@@ -191,8 +251,8 @@
     .proof{gap:20px}
     .credit-list li{grid-template-columns:44px 1fr;gap:10px}
     .credit-list .r{grid-column:2;text-align:left}
-    /* Disable fixed background on mobile for performance */
     body { background-attachment: scroll; }
+    .audio-player { width: calc(100vw - 44px); right: 22px; bottom: 90px; }
   }
 </style>
 </head>
@@ -364,7 +424,139 @@
   <div class="caption" id="lightbox-caption"></div>
 </div>
 
+<!-- AUDIO PLAYER WIDGET -->
+<audio id="audio-element"></audio>
+<div class="audio-player" id="audioPlayer">
+  <div class="audio-header" onclick="togglePlayer()">
+    <h4>Listen to our Score</h4>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="audio-body">
+    <div class="audio-controls">
+      <button class="play-btn" id="playBtn" onclick="togglePlay()">▶</button>
+      <div class="track-info">
+        <div class="title" id="currentTitle">Ara Orun Kinkin</div>
+        <div class="artist">14 Sticks Entertainments</div>
+      </div>
+    </div>
+    <div class="progress-bar" onclick="seekAudio(event)">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <ul class="track-list" id="trackList">
+      <!-- TRACKS GENERATED BY JS -->
+    </ul>
+  </div>
+</div>
+
 <script>
+  // --- TRACK LIST DATA ---
+  const playlist = [
+    { name: "Ara Orun Kinkin", file: "ara-orun-kinkin.mp3" },
+    { name: "Danger Beckon", file: "danger-beckon.mp3" },
+    { name: "Erimigho", file: "erimigho.mp3" },
+    { name: "Ganglings", file: "ganglings.mp3" },
+    { name: "Kutukapala", file: "kutukapala.mp3" },
+    { name: "Legends Awaken", file: "legends-awaken.mp3" },
+    { name: "Nwa Aba", file: "nwa-aba.mp3" },
+    { name: "Opening Drums (Orchestral)", file: "opening-drums-orchestral.mp3" },
+    { name: "Opening Drums", file: "opening-drums.mp3" },
+    { name: "Sad Full Score", file: "sad-full-score.mp3" },
+    { name: "Shadows of the Dawn", file: "shadows-of-the-dawn.mp3" },
+    { name: "Street Kings", file: "street-kings.mp3" },
+    { name: "Talondun", file: "talondun.mp3" },
+    { name: "Caustic", file: "caustic.mp3" },
+    { name: "DronzyPonzi", file: "dronzyponzi.mp3" },
+    { name: "Imperfection", file: "imperfection.mp3" },
+    { name: "MarceNarae", file: "marcenarae.mp3" },
+    { name: "The Cello's Lament", file: "the-cellos-lament.mp3" }
+  ];
+
+  let currentTrackIndex = 0;
+  let isPlaying = false;
+  const audio = document.getElementById('audio-element');
+  const playBtn = document.getElementById('playBtn');
+  const currentTitle = document.getElementById('currentTitle');
+  const progressFill = document.getElementById('progressFill');
+  const trackListEl = document.getElementById('trackList');
+
+  // 1. Build the list in the UI
+  function renderPlaylist() {
+    trackListEl.innerHTML = '';
+    playlist.forEach((track, index) => {
+      const li = document.createElement('li');
+      li.textContent = track.name;
+      li.onclick = () => loadTrack(index);
+      if (index === currentTrackIndex) li.classList.add('active');
+      trackListEl.appendChild(li);
+    });
+  }
+
+  // 2. Load a track
+  function loadTrack(index) {
+    currentTrackIndex = index;
+    audio.src = playlist[index].file;
+    currentTitle.textContent = playlist[index].name;
+    
+    // Update active class
+    document.querySelectorAll('.track-list li').forEach((li, i) => {
+      li.classList.toggle('active', i === index);
+    });
+
+    if (isPlaying) {
+      audio.play();
+    } else {
+      playBtn.textContent = '▶';
+    }
+    progressFill.style.width = '0%';
+  }
+
+  // 3. Play/Pause
+  function togglePlay() {
+    if (!audio.src) loadTrack(0); // Load first track if none selected
+    
+    if (isPlaying) {
+      audio.pause();
+      playBtn.textContent = '▶';
+      isPlaying = false;
+    } else {
+      audio.play();
+      playBtn.textContent = '⏸';
+      isPlaying = true;
+    }
+  }
+
+  // 4. Update Progress Bar
+  audio.addEventListener('timeupdate', () => {
+    if (audio.duration) {
+      const percent = (audio.currentTime / audio.duration) * 100;
+      progressFill.style.width = percent + '%';
+    }
+  });
+
+  // 5. Auto-play next track
+  audio.addEventListener('ended', () => {
+    currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+    loadTrack(currentTrackIndex);
+    audio.play();
+  });
+
+  // 6. Seek functionality
+  function seekAudio(e) {
+    const bar = e.currentTarget;
+    const percent = e.offsetX / bar.offsetWidth;
+    audio.currentTime = percent * audio.duration;
+  }
+
+  // 7. Minimize/Maximize Player
+  function togglePlayer() {
+    document.getElementById('audioPlayer').classList.toggle('hidden');
+  }
+
+  // Initialize
+  renderPlaylist();
+  loadTrack(0);
+
+  // --- EXISTING SITE SCRIPTS ---
   document.getElementById('year').textContent = new Date().getFullYear();
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
